@@ -85,6 +85,17 @@ Not required:
 
 - Python
 
+## Demo Video
+
+See the sample workflow demonstration in:
+
+- Dataset upload
+- Local visualization
+- OHIF viewer integration
+- Dataset deletion workflow
+
+`docs/dicom-local-viewer-demo.mp4`
+
 ## Acknowledgements
 
 This project is built on top of several excellent open-source medical imaging technologies:
