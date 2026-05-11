@@ -1,6 +1,6 @@
 # dicom-local-viewer
 
-A fully self-contained local-first DICOM viewer app built inside this repo for convenience, but designed to run independently from the rest of the repository.
+A self-contained local-first DICOM viewer for researchers, clinicians, and medical teams to securely view MRI, CT, X-ray, ultrasound, PET, mammography, fluoroscopy, nuclear medicine, radiotherapy, pathology, and cardiology imaging locally with minimal infrastructure and lightweight deployment.
 
 ## Project Rules
 
@@ -84,6 +84,15 @@ Optional for local development outside Docker:
 Not required:
 
 - Python
+
+## Acknowledgements
+
+This project is built on top of several excellent open-source medical imaging technologies:
+
+- OHIF Viewer — Web-based open-source medical imaging viewer used for DICOM visualization
+- Orthanc — Lightweight open-source DICOM server used for local DICOM storage and management
+
+This application integrates and extends these tools into a lightweight, self-contained, local-first deployment focused on secure and simple local medical image viewing workflows.
 
 ## Additional Documentation
 
