@@ -94,7 +94,9 @@ See the sample workflow demonstration in:
 - OHIF viewer integration
 - Dataset deletion workflow
 
-`docs/dicom-local-viewer-demo.mp4`
+[![Demo Video Thumbnail](./docs/demo-thumbnail.png)](./docs/dicom-local-viewer-demo.mp4)
+
+[Watch the demo video](./docs/dicom-local-viewer-demo.mp4)
 
 ## Acknowledgements
 
