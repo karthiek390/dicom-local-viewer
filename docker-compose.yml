@@ -1,0 +1,51 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      api:
+        condition: service_started
+      ohif:
+        condition: service_started
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    environment:
+      PORT: 3030
+      ORTHANC_URL: http://orthanc:8042
+      LOCAL_USER_NAME: local-user
+      LOCAL_USER_ROLE: admin
+      UPLOAD_ROOT: /opt/app/data/uploads
+      DATASET_REGISTRY_FILE: /opt/app/data/datasets-registry.json
+      SOURCE_ROOT_MAPPINGS: ${SOURCE_ROOT_MAPPINGS:-}
+    volumes:
+      - api_data:/opt/app/data
+      - "${HOST_SOURCE_ROOT_0:-./api/data}:/host-sources/root0:ro"
+    depends_on:
+      orthanc:
+        condition: service_started
+
+  orthanc:
+    image: orthancteam/orthanc:25.6.4
+    volumes:
+      - ./orthanc/orthanc.json:/etc/orthanc/orthanc.json:ro
+      - orthanc_data:/var/lib/orthanc/db
+    expose:
+      - "8042"
+      - "4242"
+
+  ohif:
+    build:
+      context: .
+      dockerfile: OHIF/Dockerfile
+    expose:
+      - "80"
+
+volumes:
+  api_data:
+  orthanc_data:

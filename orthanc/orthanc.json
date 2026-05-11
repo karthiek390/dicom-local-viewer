@@ -1,0 +1,20 @@
+{
+  "Name": "dicom-local-viewer",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "DicomWeb": {
+    "Enable": true,
+    "Root": "/dicom-web/"
+  },
+  "HttpServerEnabled": true,
+  "HttpPort": 8042,
+  "DicomServerEnabled": true,
+  "DicomPort": 4242,
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": false,
+  "HttpHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, X-Requested-With, Authorization"
+  }
+}
+
