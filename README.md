@@ -107,6 +107,12 @@ This project is built on top of several excellent open-source medical imaging te
 
 This application integrates and extends these tools into a lightweight, self-contained, local-first deployment focused on secure and simple local medical image viewing workflows.
 
+## License
+
+This project is licensed under the MIT License.
+
+This repository integrates third-party open-source software including OHIF Viewer and Orthanc, which remain subject to their own respective licenses.
+
 ## Additional Documentation
 
 For detailed project documentation, scripts, path-based upload setup, feature inventory, data lifecycle, and operational notes, see [project_file_information.md](./project_file_information.md).
